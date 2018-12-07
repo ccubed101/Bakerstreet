@@ -1,0 +1,73 @@
+@media (max-width: 767px) {
+    /* On small screens, the nav menu spans the full width of the screen. Leave a space for it. */
+    body {
+        padding-top: 50px;
+    }
+}
+
+body {
+	font-size: 100%;
+	font-family: 'Comic Sans MS';
+}
+
+.login-button {
+	margin-left: 15px;
+}
+
+.banner {
+	color: lightgray;
+	background-color: cornflowerblue;
+	font-size: xx-large;
+	font-style: italic;
+	padding: 0;
+}
+
+.separator {
+	height: 6px;
+	background-color: black;
+}
+.restaurantName {
+	font-size: x-large;
+	font-weight: 500;
+}
+
+.restaurantAddress {
+	font-size: large;
+	font-weight: 300;
+	margin-bottom: 10px;
+}
+
+.restaurantFoodType {
+	font-size: large;
+	margin-bottom: 10px;
+}
+
+.restaurantSchedule {
+	font-size: large;
+}
+
+.scheduleTableCell {
+	padding-right: 20px;
+}
+
+.sectionHeader {
+	font-weight: 700;
+}
+
+.welcomePageTitle {
+	text-align: center;
+	font-family: impact;
+	font-size: 8em;
+	font-weight: 800;
+	color: red;
+}
+
+.welcomePageSubText {
+	text-align: center;
+	font-size: 4em;
+}
+
+.welcomePageListItem {
+	font-size: 4em;
+	text-align: left;
+}
