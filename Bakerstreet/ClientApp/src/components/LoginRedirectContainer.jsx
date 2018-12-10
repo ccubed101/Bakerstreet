@@ -1,5 +1,6 @@
 ﻿import { connect } from 'react-redux'
 import LoginRedirect from './LoginRedirect';
+import { actionCreators as authenticationActionCreators } from '../store/Authentication'
 
 const mapStateToProps = state => {
 	return {
@@ -9,6 +10,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = (dispatch) => {
 	return {
+		setRedirectToAfterSuccessfulLogin: (redirectToAfterSuccessfulLogin) => dispatch(authenticationActionCreators.setRedirectToAfterSuccessfulLogin(redirectToAfterSuccessfulLogin))
 	};
 };
 
