@@ -1,4 +1,4 @@
-Running The App
+﻿Running The App
 ===============
 
 The application was developed using Visual Studio 2017.  So the easiest way to run the applicaiton is to double-click on the solution file (Bakerstreet.sln) to launch Visual Studio 2017 and then press the "IIS Express" button in the toolbar.  IIS Express will serve both the React based single page application and data from the REST API which is implemented using ASP.NET Core and is in the same domain/origin as the React app.  More recent versions of Visual Studio should also work...but that has not been tested.
@@ -39,15 +39,18 @@ A. Here j is a parameter whose scope is limited to the function j.
 
 A. As with "var j = 0;" above j will be a property on the window object in EC6.  But now j references a funtion.
 
-`function(x) {`
-    `let j = 10;`
-    `return j * x;`
-`}`
+```
+function(x) {
+    let j = 10;
+    return j * x;
+}
+```
 
 A. Here j has block scope.  j is defined only in the function and only after the line on which j was defined.
 
-`//Referenced by <script src=”file.js” />`
-`var j = 10;`
+`''//Referenced by <script src=”file.js” />
+var j = 10;
+'''
 
 A. Once again j will be a property on the window object in EC6.
 
@@ -55,9 +58,9 @@ A. The question about "where these would exist in the DOM" is puzzling to me.  J
 
 Q. What ways could this function be executed?
 
-`var a = function(b) {`
-    `return b * 10;`
-`}`
+```var a = function(b) {
+    return b * 10;
+}```
 
 A.
 1. `a(numberParam)`
@@ -72,14 +75,14 @@ A.
 
 Q. What does this function do? How would you unit test this function?
 
-````export default function c(...funcs) {
+```export default function c(...funcs) {
   if (funcs.length === 0) {
     return arg => arg
   }
   if (funcs.length === 1) {
     return funcs[0]
   }
-}````
+}```
 
 A. 'c' is a function that takes 0 to n functions as parameters which we will refer to as F1, F2, ... Fn-1, Fn.  Passing in anything other than functions will likely result in an exception.  The return value is a function that we will refer to a R.  If no parameters are passed into function 'c' then when R is executed it will return the first parameter passed in to it if at least 1 parameter is supplied.  If no parameter are supplied then 'undefined' is returned.  If a single parameter (F1) is passed into function 'c' then R is the same as F1.  If 2 or more parameters (F1, F2, ... Fn) are passed into function 'c' then R begins by executing Fn and passing to Fn the arguments that were passed into R.  Then Fn-1 is executed with the result returned from the execution of Fn passed in as parameter.  Then Fn-2 is executed with the result returned from the execution of Fn-1 passed in as parameter.  This process continues until F1 is executed with the result returned from the execution of F2 passed in as parameter.  So R = F1(F2( ... Fn-1(Fn(...args)) ... ))
 
