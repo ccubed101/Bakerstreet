@@ -19,10 +19,13 @@ class Welcome extends React.Component {
 				<div style={{ textAlign: 'center' }}>
 					<ul style={{ display: 'inline-block' }}>
 						<li className="welcomePageListItem">
-							See the partial list <Link to='/PartialList'>here.</Link>
+							See the public partial list <Link to='/PartialList'>here.</Link>
 						</li>
 						<li className="welcomePageListItem">
-							See the complete list with hours of operation <Link to="/CompleteList">here</Link>
+							See the private complete list with hours of operation <Link to="/CompleteList">here</Link>
+						</li>
+						<li className="welcomePageListItem">
+							See the private complete list with login redirect <Link to="/CompleteList">here</Link>
 						</li>
 					</ul>
 				</div>

@@ -14,8 +14,8 @@ class NavMenu extends React.Component {
 				<Navbar inverse fixedTop fluid collapseOnSelect>
 					<Navbar.Header>
 						<Navbar.Brand>
-							<Link to={'/'}>Bakerstreet</Link>
-							<LoginButtonContainer />
+							<Link style={{ color: 'white', fontSize: '1.5em' }} to={'/'}>Bakerstreet</Link>
+							<LoginButtonContainer/>
 						</Navbar.Brand>
 						<Navbar.Toggle />
 					</Navbar.Header>
@@ -28,13 +28,17 @@ class NavMenu extends React.Component {
 							</LinkContainer>
 							<LinkContainer to={'/PartialList'}>
 								<NavItem>
-									<Glyphicon glyph='th-list' /> The partial list
+									<Glyphicon glyph='th-list' /> The public partial list
 								</NavItem>
 							</LinkContainer>
-							<LinkContainer to='/CompleteList'>
+							<LinkContainer to={'/CompleteList'}>
 								<NavItem>
-									<Glyphicon glyph='th-list' />
-									<CompleteListItemTextContainer/>
+									<Glyphicon glyph='th-list' /> The private complete list
+								</NavItem>
+							</LinkContainer>
+							<LinkContainer to='/LoginRedirect'>
+								<NavItem>
+									<Glyphicon glyph='th-list' /> The complete list with login redirect.
 								</NavItem>
 							</LinkContainer>
 						</Nav>

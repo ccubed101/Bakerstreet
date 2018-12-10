@@ -12,6 +12,8 @@ body {
 
 .login-button {
 	margin-left: 15px;
+	font-size: 1.25em;
+	padding-bottom: .5em;
 }
 
 .banner {

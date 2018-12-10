@@ -24,13 +24,6 @@ class CompleteList extends React.Component {
 
 	render() {
 
-		// Enforce login requirement.
-		if (this.props.isAuthenticated !== true) {
-			return (
-				<Redirect to={'/Login'} />
-			);
-		}
-
 		// In case of error.
 		if (this.props.restaurantsHasErrored) {
 			this.props.setIsLoading(false);
