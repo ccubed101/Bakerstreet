@@ -25,7 +25,7 @@ class Welcome extends React.Component {
 							See the private complete list with hours of operation <Link to="/CompleteList">here</Link>
 						</li>
 						<li className="welcomePageListItem">
-							See the private complete list with login redirect <Link to="/CompleteList">here</Link>
+							See the private complete list with login redirect <Link to="/LoginRedirect">here</Link>
 						</li>
 					</ul>
 				</div>
